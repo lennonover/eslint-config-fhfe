@@ -1,0 +1,32 @@
+{
+  "name": "eslint-config-fhfe",
+  "version": "0.0.16",
+  "description": "fhfe esLint",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint *.js --fix",
+    "prepublish": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "eslint",
+    "lei"
+  ],
+  "author": "walei",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "peerDependencies": {
+    "eslint": "^3.0",
+    "eslint-plugin-promise": "^3.0.0"
+  }
+}
