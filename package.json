@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-fhfe",
-  "version": "0.0.16",
+  "version": "0.0.1",
   "description": "fhfe esLint",
   "main": "index.js",
   "files": [
@@ -8,23 +8,21 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint *.js --fix",
-    "prepublish": "npm run lint"
+    "lint": "eslint *.js --fix"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/lennonover/eslint-config-fhfe.git"
   },
   "keywords": [
-    "eslint",
-    "lei"
+    "eslint"
   ],
   "author": "walei",
   "license": "MIT",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/lennonover/eslint-config-fhfe/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/lennonover/eslint-config-fhfe",
   "peerDependencies": {
     "eslint": "^3.0",
     "eslint-plugin-promise": "^3.0.0"
