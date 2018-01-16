@@ -7,7 +7,7 @@ module.exports = {
         'es6': false
     },
     // esLint 规则默认开启
-    // 'extends': 'eslint:recommended',
+    'extends': 'eslint:recommended',
     // 预定义的全局变量
     'globals': {
 
