@@ -263,32 +263,9 @@
 
 	0 => 数组里面的元素关闭强制换行
 
-- block-spacing
-
-	2 => 代码块如果在一行，则大括号内的首尾必须有空格
-
-	```
-	correct 
-    /*eslint class-methods-use-this: "error"*/
-	function (a, b) { retur a + b; }
-	```
-
 - camelcase
 
 	2 => 变量命名需要以驼峰命名法，对属性字段不做限制
-
-- capitalized-comments
-
-	0 => 注释的首字母必须大写，对此不做限制
-
-- comma-spacing
-
-	2 => 逗号后面强制要求加空格
-	```javascript
-	correct
-	/*eslint comma-style: ["error", "last"]*/
-	var foo = 1, bar = 2;
-	```
 
 - comma-style
 
@@ -301,14 +278,6 @@
 		bar = 2;
 	```
 
-- func-call-spacing
-
-	2 => 函数名和执行它的括号之间禁止有空格
-	```javascripr
-	correct
-	/*eslint func-call-spacing: ["error", "never"]*/
-	fn();
-	```
 
 - func-name-matching
 
@@ -330,11 +299,127 @@
 
 	2 => 变量命令的字符需要在某个正则匹配规则里面，不采纳
 
+- linebreak-style
+
+    0 => 对换行符不限制
+
+- max-depth
+
+    2 => 代码块嵌套的深度禁止超过 5 层
+
+- max-len
+
+    2 => 单行最多允许 100 个字符, 对包含 url 的行不进行此限制
+
+- max-lines
+
+    0 => 不限制某个文件能够放置的最大代码行数，
+
+- max-params
+
+    2 => 函数的参数禁止超过 10 个
+
+- multiline-ternary
+
+    2 => 不限制三元算语句换行
+
+
+- new-cap
+
+    2 => 构造函数的必须以大写字母开头
+
+- new-parens
+
+    2 => new 后面类必须带上括号
+
+- newline-per-chained-call
+
+    0 => 不限制链式调用必须换行
+
+- no-bitwise
+
+    0 => 位操作，不进行限制
+
+- no-continue
+
+    0 => continue 语句的使用，不限制
+
+
+- no-lonely-if
+
+    0 => 允许单独使用 if 语句，而不配套使用 else、else if 等
+
+- no-multiple-empty-lines
+
+    0 => 连续空行，不限制
+
+- no-negated-condition
+
+    0 => if 里面不允许出现否定表达式， 不采纳
+
+- no-nested-ternary
+
+    0 => 允许三元表达式的嵌套使用
+
+- no-plusplus
+
+    0 => 允许使用 ++ 或 --
+
+- no-underscore-dangle
+
+    0 => 允许变量名中出现下划线
+
+- object-curly-newline
+
+    2 => 大括号内的首尾必须有换行
+
+- object-property-newline
+
+    0 => 对象字面量内的属性每行必须只有一个，不采纳
+- one-var
+
+    0 => 不采纳，声明变量时，禁止一条语句声明多个变量
+
+- one-var-declaration-per-line
+
+    0 => 不采纳，变量申明必须每行一个
+
+- quotes
+
+    2 => 必须使用单引号
+- semi
+
+    2 => 结尾必须有分号
+
+- semi-spacing
+
+    2 => 一行有多个语句时，分号前面禁止有空格，分号后面必须有空格
+
+- semi-style
+
+    2 => 分号必须写在行尾，禁止在行首出现
+
 - indent
 
 	2 => 一个缩进必须用四个空格替代, switch 语句里面的 case 2 个空格 Tab 无法做到行内 行末代码或注释的对齐, 而空格啥都可以
 
+- block-spacing
 
+	2 => 代码块如果在一行，则大括号内的首尾必须有空格
+
+	```
+	correct 
+    /*eslint class-methods-use-this: "error"*/
+	function (a, b) { retur a + b; }
+	```
+- comma-spacing
+
+	2 => 逗号后面强制要求加空格
+	```javascript
+	correct
+	/*eslint comma-style: ["error", "last"]*/
+	var foo = 1, bar = 2;
+	```
 - key-spacing
 
 	2 => 对象字面量中冒号前面禁止有空格，后面必须有空格
@@ -350,7 +435,60 @@
         // ...
     }
     ```
-    
+- no-trailing-spaces
+
+    2 => 禁止行尾部有空格
+
+- no-whitespace-before-property
+
+    2 => 禁止属性前有空格比如 foo. bar()
+
+
+- func-call-spacing
+
+	2 => 函数名和执行它的括号之间禁止有空格
+	```javascripr
+	correct
+	/*eslint func-call-spacing: ["error", "never"]*/
+	fn();
+	```
+- space-before-blocks
+
+    2 => if, function 等的大括号之前必须要有空格
+
+- space-before-function-paren
+
+    2 => function 的小括号前面必须有空格
+
+- space-in-parens
+
+    2 => 小括号内的首尾禁止有空格
+
+- space-infix-ops
+
+    2 => 操作符左右必须有空格, var str = 'HELLO' + 'FHUED'
+
+- spaced-comment
+
+    0 => 注释空格不限制
+
+- capitalized-comments
+
+	0 => 注释的首字母必须大写，对此不做限制
+
+- no-inline-comments
+
+    0 => 内联注释不限制
+
+- line-comment-position
+
+    0 => 注释的位置不进行限制
+
+- lines-around-comment
+
+    0 => 注释前后必须有空行不限制
+
+
 - class-methods-use-this
 
     2 => 要求在 Class 里面合理使用 this，如果某个方法没有使用 this, 则应该申明为静态方法
