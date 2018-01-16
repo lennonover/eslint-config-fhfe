@@ -1,5 +1,7 @@
 # eslint-config-fhfe
 
+[![npm version](https://badge.fury.io/js/eslint-config-fhfe.svg)](http://badge.fury.io/js/eslint-config-fhfe)
+
 eslint-config-fhfe 是烽火 UED 前端组为了帮助保持团队的代码风格统一，发现代码潜在错误而定制出了友好的 ESLint 配置。
 
 ## 使用
