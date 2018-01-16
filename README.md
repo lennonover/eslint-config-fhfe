@@ -1,5 +1,50 @@
 # eslint-config-fhfe
 
+eslint-config-fhfe 是烽火 UED 前端组为了帮助保持团队的代码风格统一，发现代码潜在错误而定制出了友好的 ESLint 配置。
+
+## 使用
+
+- 项目中使用
+
+    `npm install --save-dev eslint eslint-config-fhfe`
+
+    在你的项目根目录下创建 .eslintrc.js，并将以下内容复制到文件中：
+
+    ```javascript
+    module.exports = {
+        extends: [
+            'eslint-config-fhfe',
+        ],
+        globals: {
+            // 这里填入你的项目需要的全局变量
+            // 这里值为 false 表示这个全局变量不允许被重新赋值
+        rules: {
+            // 这里填入你的项目需要的个性化配置，比如：
+        }
+    };
+    ```
+- vscode 中使用
+
+    首先，打开 VSCode 扩展面板并搜索 ESLint 扩展，然后点击安装，安装完毕之后点击 `重新加载` 以激活扩展，但想要让扩展进行工作，我们还需要先进行 ESLint 的安装配置。
+
+    - 如果你仅仅想让 ESLint 成为你项目构建系统的一部分，我们可以在项目根目录进行本地安装：
+
+    `npm install eslint --save-dev`
+
+    - 如果想使 ESLint 适用于你所有的项目，我们建议使用全局安装，使用全局安装 ESLint 后，你使用的任何 ESLint 插件或可分享的配置也都必须在全局安装。
+
+    `npm install -g eslint`
+
+    安装并配置完成 ESLint 后，我们继续回到 VSCode 进行扩展设置，依次点击 `文件` > `首选项` > `设置` 打开 VSCode 配置文件
+
+    从左侧系统设置中可以看到，ESLint 扩展默认已经启用，我们现在只需在右侧用户设置中添加配置来指定我们创建的 .eslintrc.js 配置文件路径即可启用自定义规则检测，ESLint 会查找并自动读取它们：
+
+    ```javascript
+    "eslint.options": {
+        "configFile": "xxx/xxx/.eslintrc.js"
+    },
+    ```
+
 ## 规则
 
 0 => off   => 表示禁用这条规则        
@@ -259,6 +304,10 @@
 
 	2 => 数组的括号前后禁止有空格
 
+- no-mixed-spaces-and-tabs
+
+    2 => 禁止混用空格和缩进
+
 - array-element-newline
 
 	0 => 数组里面的元素关闭强制换行
@@ -387,13 +436,10 @@
 - quotes
 
     2 => 必须使用单引号
+
 - semi
 
     2 => 结尾必须有分号
-
-- semi-spacing
-
-    2 => 一行有多个语句时，分号前面禁止有空格，分号后面必须有空格
 
 - semi-style
 
@@ -443,7 +489,9 @@
 
     2 => 禁止属性前有空格比如 foo. bar()
 
+- semi-spacing
 
+    2 => 一行有多个语句时，分号前面禁止有空格，分号后面必须有空格
 - func-call-spacing
 
 	2 => 函数名和执行它的括号之间禁止有空格
