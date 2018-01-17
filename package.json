@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-fhfe",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "fhfe esLint",
   "main": "index.js",
   "files": [
