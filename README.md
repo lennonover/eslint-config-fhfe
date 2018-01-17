@@ -8,7 +8,7 @@ eslint-config-fhfe 是烽火 UED 前端组为了帮助保持团队的代码风�
 
 - 项目中使用
 
-    `npm install --save-dev eslint eslint-config-fhfe`
+    `npm install --save-dev eslint babel-eslint eslint-config-fhfe`
 
     在你的项目根目录下创建 .eslintrc.js，并将以下内容复制到文件中：
 
@@ -633,7 +633,7 @@ eslint-config-fhfe 是烽火 UED 前端组为了帮助保持团队的代码风�
 
 - no-var
 
-    2 => 禁止采用 var 去定义变量，必须使用 let 或者 const
+    0 => 当前团队还有 es5 关闭禁止采用 var 去定义变量，必须使用 let 或者 const
 
 - prefer-arrow-callback
 
@@ -641,7 +641,7 @@ eslint-config-fhfe 是烽火 UED 前端组为了帮助保持团队的代码风�
 
 - prefer-const
 
-    2 => 变量如果没有发生修改，则必须使用 const 进行命名
+    1 => 变量如果没有发生修改，则必须使用 const 进行命名
 
 - prefer-destructuring
 
@@ -649,7 +649,7 @@ eslint-config-fhfe 是烽火 UED 前端组为了帮助保持团队的代码风�
 
 - prefer-destructuring
 
-    2 => 强制使用模板字符串
+    1 => 建议强制使用模板字符串
 
 - template-curly-spacing
 
@@ -669,7 +669,7 @@ eslint-config-fhfe 是烽火 UED 前端组为了帮助保持团队的代码风�
 - yield-star-spacing
 
     2 => yield* 后面必须加空格
-    
+
 - no-const-assign
 
     2 => 禁止对使用 const 定义的常量重新赋值

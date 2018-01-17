@@ -1,13 +1,15 @@
 module.exports = {
+    // 使用非默认的 babel-eslint 作为代码解析器
+    parser: 'babel-eslint',
     // 指定程序的目标环境
     'env': {
         'browser': true,
         'commonjs': false,
         'jquery': true,
-        'es6': false
+        'es6': true
     },
     // esLint 规则默认开启
-    'extends': 'eslint:recommended',
+    // 'extends': 'eslint:recommended',
     // 预定义的全局变量
     'globals': {
 
@@ -319,7 +321,7 @@ module.exports = {
         // 要求在 Class 里面合理使用 this，如果某个方法没有使用 this, 则应该申明为静态方法
         'class-methods-use-this': 2,
         // constructor 中必须有 super
-        'constructor-super': 'error',
+        'constructor-super': 2,
         // 箭头函数的返回值，应该允许灵活设置没必须一定用大括号写成多条语句
         'arrow-body-style': 0,
         // 箭头函数的参数必须用括号包裹起来，限制去掉。当只有一个参数时，没必要使用括号
@@ -342,20 +344,20 @@ module.exports = {
         ],
         // 禁止 import 重复模块
         'no-duplicate-imports': 2,
-        // 禁止采用 var 去定义变量，必须使用 let 或者 const
-        'no-var': 2,
+        // 当前团队还有 es5 关闭禁止采用 var 去定义变量，必须使用 let 或者 const
+        'no-var': 0,
         // 必须使用箭头函数作为回调，不采纳
         'prefer-arrow-callback': 0,
         // 变量如果没有发生修改，则必须使用 const 进行命名
-        'prefer-const': 2,
+        'prefer-const': 1,
         // 禁止对使用 const 定义的常量重新赋值
         'no-const-assign': 2,
         // 禁止重复定义类
         'no-dupe-class-members': 2,
         // 强制使用结构的限制，不采纳
         'prefer-destructuring': 0,
-        // 强制使用模板字符串
-        'prefer-template': 2,
+        // 建议强制使用模板字符串
+        'prefer-template': 1,
         // 模板字符串内的首尾禁止有空格
         'template-curly-spacing': [2, 'never'],
         //  ... 的后面禁止有空格
