@@ -603,5 +603,79 @@ eslint-config-fhfe 是烽火 UED 前端组为了帮助保持团队的代码风�
         }
     }
     ```
--
+- constructor-super
+
+    2 => constructor 中必须有 super
+
+- arrow-body-style
+
+    0 => 箭头函数的返回值，应该允许灵活设置没必须一定用大括号写成多条语句
+
+- arrow-parens
+
+    0 => 箭头函数的参数必须用括号包裹起来，限制去掉。当只有一个参数时，没必要使用括号
+
+- arrow-spacing
+
+    2 => 箭头函数的箭头前后必须有空格
+
+- generator-star-spacing
+
+    2 => generator 的 * 前面禁止有空格，后面必须有空格
+
+- no-class-assign
+
+    2 => 禁止对定义过的 Class 重新赋值
+
+- no-duplicate-imports
+
+    2 => 禁止 import 重复模块
+
+- no-var
+
+    2 => 禁止采用 var 去定义变量，必须使用 let 或者 const
+
+- prefer-arrow-callback
+
+    0 => 必须使用箭头函数作为回调，不采纳
+
+- prefer-const
+
+    2 => 变量如果没有发生修改，则必须使用 const 进行命名
+
+- prefer-destructuring
+
+    0 => 强制使用结构的限制，不采纳
+
+- prefer-destructuring
+
+    2 => 强制使用模板字符串
+
+- template-curly-spacing
+
+    2 => 模板字符串内的首尾禁止有空格
+
+- rest-spread-spacing
+
+    2 => ... 的后面禁止有空格
+
+- sort-imports
+
+    0 => import 的排序不用限制
+- 
+
+    2 => 模板字符串内的首尾禁止有空格
+
+- yield-star-spacing
+
+    2 => yield* 后面必须加空格
+    
+- no-const-assign
+
+    2 => 禁止对使用 const 定义的常量重新赋值
+
+- no-dupe-class-members
+
+    2 => 禁止重复定义类
+
 		

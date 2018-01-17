@@ -22,6 +22,13 @@ module.exports = {
 
         }
     },
+    // 对于某个文件使用哪个配置文件，按照以下顺序查找
+    // 1. 在待检测文件的同一目录查找配置文件
+    // 2. 往上逐层父级目录查找，直到发现一个有 "root": true 的
+    // 3. 使用项目根目录配置文件
+    // 4. 使用系统全局配置文件
+    // 所以表示 以当前目录为根目录，不再向上查找 .eslintrc.js
+    'root': true,
     'rules': {
 
         // 0 => off   => 表示禁用这条规则
@@ -311,6 +318,51 @@ module.exports = {
         //-----------------ES6--------------------------
         // 要求在 Class 里面合理使用 this，如果某个方法没有使用 this, 则应该申明为静态方法
         'class-methods-use-this': 2,
-
+        // constructor 中必须有 super
+        'constructor-super': 'error',
+        // 箭头函数的返回值，应该允许灵活设置没必须一定用大括号写成多条语句
+        'arrow-body-style': 0,
+        // 箭头函数的参数必须用括号包裹起来，限制去掉。当只有一个参数时，没必要使用括号
+        'arrow-parens': 0,
+        // 箭头函数的箭头前后必须有空格
+        'arrow-spacing': [
+            2,
+            {
+                before: true,
+                after: true
+            }
+        ],
+        // generator 的 * 前面禁止有空格，后面必须有空格
+        'generator-star-spacing': [
+            2,
+            {
+                before: false,
+                after: true
+            }
+        ],
+        // 禁止 import 重复模块
+        'no-duplicate-imports': 2,
+        // 禁止采用 var 去定义变量，必须使用 let 或者 const
+        'no-var': 2,
+        // 必须使用箭头函数作为回调，不采纳
+        'prefer-arrow-callback': 0,
+        // 变量如果没有发生修改，则必须使用 const 进行命名
+        'prefer-const': 2,
+        // 禁止对使用 const 定义的常量重新赋值
+        'no-const-assign': 2,
+        // 禁止重复定义类
+        'no-dupe-class-members': 2,
+        // 强制使用结构的限制，不采纳
+        'prefer-destructuring': 0,
+        // 强制使用模板字符串
+        'prefer-template': 2,
+        // 模板字符串内的首尾禁止有空格
+        'template-curly-spacing': [2, 'never'],
+        //  ... 的后面禁止有空格
+        'rest-spread-spacing': [2, 'never'],
+        // import 的排序不用限制
+        'sort-imports': 0,
+        // yield* 后面必须加空格
+        'yield-star-spacing': [2, 'after']
     }
 };
