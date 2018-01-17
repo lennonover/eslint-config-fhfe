@@ -662,7 +662,8 @@ eslint-config-fhfe 是烽火 UED 前端组为了帮助保持团队的代码风�
 - sort-imports
 
     0 => import 的排序不用限制
-- 
+
+- template-curly-spacing
 
     2 => 模板字符串内的首尾禁止有空格
 
