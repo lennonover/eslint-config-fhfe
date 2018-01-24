@@ -169,11 +169,11 @@ module.exports = {
             2,
             5
         ],
-        // 单行最多允许 100 个字符, 对包含 url 的行不进行此限制
+        // 单行最多允许 300 个字符, 对包含 url 的行不进行此限制
         'max-len': [
             2,
             {
-                code: 100,
+                code: 300,
                 tabWidth: 2,
                 ignoreUrls: true
             }
